@@ -1,12 +1,8 @@
 import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { Observable } from "rxjs";
+import { HttpClient } from '@angular/common/http';
 import { ReviewBPage } from '../review-b/review-b';
-/**
- * Generated class for the ListNewPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -17,8 +13,22 @@ export class ListNewPage implements OnInit {
   @Input() rating: number;
   @Output() ratingChange: EventEmitter<Number> = new EventEmitter();
   items: any;
-  title: string;
-  constructor(public nav: NavController, public navParams: NavParams) {
+  private dataUrl: string = "assets/example_data/newCategory.json";
+
+  constructor(public nav: NavController,
+              public navParams: NavParams,
+              public http: HttpClient) {
+    this.loadData();
+
+  }
+
+  loadData()
+  {
+    let data:Observable<any>;
+    data = this.http.get(this.dataUrl);
+    data.subscribe(result => {
+      this.items=result;
+    })
   }
 
   ngOnInit() {}
@@ -26,27 +36,6 @@ export class ListNewPage implements OnInit {
   rate(index: number) {
     this.rating = index;
     this.ratingChange.emit(this.rating);
-  }
-
-  getColor(index: number) {
-    if (this.isAboveRating(index)) {
-      return COLORS.GREY;
-    }
-    switch (this.rating) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        return COLORS.YELLOW;
-
-      default:
-        return COLORS.GREY;
-    }
-  }
-
-  isAboveRating(index: number): boolean {
-    return index > this.rating;
   }
 
   goToA() {

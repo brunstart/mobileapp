@@ -18,7 +18,7 @@ import { Observable } from "rxjs";
 export class ReviewBPage {
 
   public items:any;
-  private dataUrl: string = "assets/example_data/list-new.json";
+  private dataUrl: string = "assets/example_data/loseWeight.json";
 
   @Input() rating: number = 5;
 
@@ -27,7 +27,7 @@ export class ReviewBPage {
   constructor(public nav: NavController, public navParams: NavParams,
     public http: HttpClient) {
       this.loadData();
-  }
+    }
 
   loadData()
   {

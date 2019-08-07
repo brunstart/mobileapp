@@ -5,39 +5,19 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
     <ion-title> listNew </ion-title>
-    <!-- <ion-buttons right>
-        <button ion-button icon-only (click)="addNew()">
-          <ion-icon name='add'></ion-icon>
-        </button>
-      </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
 <ion-content no-padding>
   <ion-row padding>
-    <ion-col>
-      <img tappable src="../../assets/images/0002.png" title="A" (click)="goToA()" />
-      <p>=>Lose Weight</p>
-    </ion-col>
-    <ion-col>
-      <img tappable src="../../assets/images/0002.png" title="B" (click)="goToA()" />
-      <p>=>Lower Stress</p>
-    </ion-col>
-  </ion-row>
-  <ion-row padding>
-    <ion-col>
-      <img tappable src="../../assets/images/0002.png" title="A" (click)="goToA()" />
-      <p>=>Get muscles</p>
-    </ion-col>
-    <ion-col>
-      <img tappable src="../../assets/images/0002.png" title="B" (click)="goToA()" />
-      <p>=>Overcome diabetes</p>
+    <ion-col width-50 *ngFor="let item of items">
+      <img tappable [src]="item.image" [title]="item.category" (click)="goToA()" />
+      <p>=>{{item.category}}</p>
     </ion-col>
   </ion-row>
 </ion-content>
