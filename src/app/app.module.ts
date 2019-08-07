@@ -11,6 +11,7 @@ import { File } from '@ionic-native/file';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { HTTP } from '@ionic-native/http';
 
+import { ReviewBPage } from '../pages/review-b/review-b';
 import { ListingPage } from '../pages/listing/listing';
 import { HistoryPage } from '../pages/history/history';
 import { SettingsTabPage } from '../pages/settingstab/settingstab';
@@ -56,6 +57,7 @@ import { ListTreatmentPage } from '../pages/listTreatment/listTreatment';
 import { ListDoseHistory } from '../pages/listDoseHistory/listDoseHistory';
 import { ListTaskPage } from '../pages/listTask/listTask';
 import { ListProcedure } from '../pages/listProcedure/listProcedure';
+import { ListNewPage } from '../pages/list-new/list-new';
 
 import { GridPage } from '../pages/grid/grid';
 import { FormLayoutPage } from '../pages/form-layout/form-layout';
@@ -188,6 +190,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
+    ReviewBPage,
+    ListNewPage,
     MyApp,
     ListingPage,
     HistoryPage,
@@ -311,6 +315,8 @@ import { TextMaskModule } from 'angular2-text-mask';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    ReviewBPage,
+    ListNewPage,
     MyApp,
     ListingPage,
     HistoryPage,

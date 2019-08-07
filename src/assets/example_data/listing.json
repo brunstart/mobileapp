@@ -55,6 +55,10 @@
         {
             "title": "Visit",
             "image": "./assets/images/listing/200x200drphil.jpg"
+        },
+        {
+            "title": "New",
+            "image": "./assets/images/0001.png"
         }
 
     ]

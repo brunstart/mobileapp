@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Homer",
+    "category": "Losing weight",
+    "title": "How to lose your weight as faster as you can",
+    "description": "This is a Homer character",
+    "image": "assets/images/0001.png"
+  },
+  {
+    "name": "Bart",
+    "category": "Lower stress",
+    "title": "How to lose your weight as faster as you can",
+    "description": "This is a Bart character",
+    "image": "assets/images/0004.png"
+  },
+  {
+    "name": "Marge",
+    "category": "Get muscles",
+    "title": "How to lose your weight as faster as you can",
+    "description": "This is a Marge character",
+    "image": "assets/images/0005.png"
+  },
+  {
+    "name": "Lisa",
+    "category": "Losing weight",
+    "title": "How to lose your weight as faster as you can",
+    "description": "This is a Lisa character",
+    "image": "assets/images/0002.png"
+  },
+  {
+    "name": "Maggie",
+    "category": "Overcoming diabetes",
+    "title": "How to lose your weight as faster as you can",
+    "description": "This is a Maggie character",
+    "image": "assets/images/0003.png"
+  }
+]

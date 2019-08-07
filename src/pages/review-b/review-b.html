@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="addNew()">
+          <ion-icon name='add'></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items" class="big-list">
+      <div class="div-container">
+      <div class = "div-box div-left">
+        <ion-avatar item-start>
+          <img src="{{ item.image }}" />
+        </ion-avatar>
+      </div>
+      <div class = "div-box div-center">
+        <h2> Name : {{ item.name }} </h2>
+        <h4> {{ item.description }} </h4>
+
+            <ion-icon
+            name="star"
+            *ngFor="let num of [1,2,3,4,5]"
+            [ngStyle]="{ color:getColor(num) }"
+            >
+            </ion-icon>
+
+      </div>
+      <div class = "div-box div-right">
+        <button class="item-arrow" (click)="goToB()">
+          <ion-icon
+          ios="ios-arrow-round-forward"
+          md="md-arrow-round-forward"
+          >
+          </ion-icon>
+        </button>
+      </div>
+    </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

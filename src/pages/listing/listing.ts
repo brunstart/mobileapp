@@ -22,6 +22,8 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HttpClient} from '@angular/common/http';
 import { File } from '@ionic-native/file';
+import { ListNewPage } from '../list-new/list-new';
+import { ReviewBPage } from '../review-b/review-b';
 
 var moment = require('moment-timezone');
 
@@ -427,6 +429,8 @@ export class ListingPage {
       this.nav.push(ListVisitPage, { category: category });
     } else if (category.title == 'Medicine' || category.title == 'Current Medicine' || category.title == 'Medicine Cabinet') {
       this.nav.push(ListMedicationPage, { category: category });
+    } else if (category.title == 'New') {
+      this.nav.push(ListNewPage, { category: category });
     } else {
       console.log('Invalid category from listing.gotoFeed: ', category);
       if (this.blnShowFeed) {
