@@ -6,18 +6,29 @@
 -->
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title> listNew </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content no-padding>
-  <ion-row padding>
-    <ion-col width-50 *ngFor="let item of items">
-      <img tappable [src]="item.image" [title]="item.category" (click)="goToA()" />
-      <p>=>{{item.category}}</p>
+<ion-content no-padding class="listing-content">
+  <ion-row class="grid-categories">
+    <ion-col width-50 class="category-item" *ngFor="let item of items">
+      <background-image
+        tappable
+        class="category-heading"
+        [src]="item.image"
+        [title]="item.category"
+        (click)="goToA(item)"
+      >
+        <ion-row class="heading-row">
+          <ion-col no-padding width-100>
+            <h2 class="category-title">{{ item.category }}</h2>
+          </ion-col>
+        </ion-row>
+      </background-image>
     </ion-col>
   </ion-row>
 </ion-content>

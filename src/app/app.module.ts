@@ -11,6 +11,10 @@ import { File } from '@ionic-native/file';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { HTTP } from '@ionic-native/http';
 
+import { Tab2Page } from '../pages/tab2/tab2';
+import { ReviewEPage } from '../pages/review-e/review-e';
+import { ReviewDPage } from '../pages/review-d/review-d';
+import { ReviewCPage } from '../pages/review-c/review-c';
 import { ReviewBPage } from '../pages/review-b/review-b';
 import { ListingPage } from '../pages/listing/listing';
 import { HistoryPage } from '../pages/history/history';
@@ -190,6 +194,10 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
+    Tab2Page,
+    ReviewEPage,
+    ReviewDPage,
+    ReviewCPage,
     ReviewBPage,
     ListNewPage,
     MyApp,
@@ -315,6 +323,10 @@ import { TextMaskModule } from 'angular2-text-mask';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    Tab2Page,
+    ReviewEPage,
+    ReviewDPage,
+    ReviewCPage,
     ReviewBPage,
     ListNewPage,
     MyApp,

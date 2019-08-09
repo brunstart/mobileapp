@@ -23,7 +23,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HttpClient} from '@angular/common/http';
 import { File } from '@ionic-native/file';
 import { ListNewPage } from '../list-new/list-new';
-import { ReviewBPage } from '../review-b/review-b';
 
 var moment = require('moment-timezone');
 

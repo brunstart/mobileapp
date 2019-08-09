@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { Observable } from "rxjs";
 import { HttpClient } from '@angular/common/http';
 import { ReviewBPage } from '../review-b/review-b';
+import { ReviewCPage } from '../review-c/review-c';
+import { ReviewDPage } from '../review-d/review-d';
+import { ReviewEPage } from '../review-e/review-e';
 
 @IonicPage()
 @Component({
@@ -12,6 +15,7 @@ import { ReviewBPage } from '../review-b/review-b';
 export class ListNewPage implements OnInit {
   @Input() rating: number;
   @Output() ratingChange: EventEmitter<Number> = new EventEmitter();
+  blnShowFeed: boolean = false;
   items: any;
   private dataUrl: string = "assets/example_data/newCategory.json";
 
@@ -38,15 +42,24 @@ export class ListNewPage implements OnInit {
     this.ratingChange.emit(this.rating);
   }
 
-  goToA() {
-    this.nav.push(ReviewBPage);
+  goToA(item: any) {
+    console.log('Clicked goToA', item.category);
+    if (item.category == 'Losing weight') {
+      console.log('push to Losing weight');
+      this.nav.push(ReviewBPage);
+    } else if (item.category == 'Lower stress'){
+      console.log('push to Lower stress');
+      this.nav.push(ReviewCPage);
+    } else if (item.category == 'Overcome diabetes'){
+      console.log('push to Overcome diabetes');
+      this.nav.push(ReviewDPage);
+    } else if (item.category == 'Get muscles'){
+      console.log('push to Get muscles');
+      this.nav.push(ReviewEPage);
+    } else {
+      console.log('Failed');
+    }
+    //this.nav.push(ReviewBPage);
   }
   addNew() {}
-}
-
-enum COLORS {
-  GREY = "#E0E0E0",
-  GREEN = "#76FF03",
-  YELLOW = "#FFCA28",
-  RED = "#DD2C00"
 }

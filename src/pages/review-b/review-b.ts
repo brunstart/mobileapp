@@ -16,17 +16,17 @@ import { Observable } from "rxjs";
   templateUrl: 'review-b.html',
 })
 export class ReviewBPage {
-
-  public items:any;
+  items:any;
   private dataUrl: string = "assets/example_data/loseWeight.json";
 
   @Input() rating: number = 5;
 
   @Output() ratingChange: EventEmitter<Number> = new EventEmitter();
 
-  constructor(public nav: NavController, public navParams: NavParams,
-    public http: HttpClient) {
-      this.loadData();
+  constructor(public nav: NavController,
+              public navParams: NavParams,
+              public http: HttpClient) {
+    this.loadData();
     }
 
   loadData()
