@@ -46,7 +46,7 @@
     "angular2-text-mask": "^4.1.0",
     "aws-amplify": "^0.2.11",
     "aws-api-gateway-client": "^0.2.12",
-    "aws-sdk": "^2.211.0",
+    "aws-sdk": "^2.814.0",
     "bourbon": "4.3.4",
     "call-number": "^1.0.1",
     "chart.js": "^2.7.3",
